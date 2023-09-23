@@ -1,9 +1,20 @@
-h2 {
-    color: rgb(100, 100, 170);
+body {
+    margin: 0;
+    padding: 0;
     display: flex;
     justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Use min-height to ensure the container expands vertically if needed */
+    background-color: #333;
 }
 
+/* Center-container first child of the body  */
+.center-container {
+    text-align: center; /* Center text inside the container */
+    max-width: 800px; /* Max width of content in the div */
+}
+
+/* background vided  */
 .video1 {
     position: absolute;
     right: 0;
@@ -24,18 +35,45 @@ h2 {
         height: 100%;
     }
 }
+/* end background vided  */
+
+
 
 #instructionsdiv {
     display: flex;
     justify-content: center;
+    align-items: center;
     width: 100%;
-    
+    transition: 3s;
+    perspective: 1000px; /* Perspective for 3D effect */
+}
 
+
+h2 {
+    color: rgb(252, 253, 253);
+    display: flex;
+    justify-content: center;
+    transform: translateZ(-500px) scale(0.2); /* Initial position and size */
+    animation: flyIn 4s ease-in-out forwards; /* Animation properties */
+}
+
+@keyframes flyIn {
+    0% {
+        transform: translateZ(-500px) scale(0.2); /* Initial position and size */
+        opacity: 0; /* Start with opacity 0 */
+    }
+    100% {
+        transform: translateZ(0) scale(1); /* Final position and size */
+        opacity: 1; /* End with opacity 1 */
+    }
 }
 
 #searchandbuttondiv {
     display: flex;
     justify-content: center;
+    
+    perspective: 1000px; /* Perspective for 3D effect */
+    animation: flyIn 4s ease-in-out forwards; /* Animation properties */
     
 
 }
@@ -46,7 +84,7 @@ h2 {
 @import url("https://fonts.googleapis.com/css?family=Raleway");
 
 :root {
-  --glow-color: hsla(0, 88%, 39%, 0.541);
+  --glow-color: hsl(0, 0%, 99%);
 }
 
 *,
@@ -262,14 +300,15 @@ h2 {
     font-size: 18px;
     letter-spacing: 2px;
     outline: none;
-    border-radius: 25px;
-    transition: all .5s ease-in-out;
-    background-color:hsla(0, 88%, 39%, 0.541);
+    border-radius: 10px;
+    transition: all 1s ease-in-out;
+    background-color:hsla(0, 14%, 99%, 0.418);
+    /* border: 3px 0px 0px 0px solid rgba(119, 23, 23, 0.623); */
     padding-right: 40px;
-    color:rgb(100, 100, 170);
+    color:rgb(248, 248, 250);
   }
   #inputsearch::placeholder{
-    color:rgb(100, 100, 170);
+    color:rgb(227, 227, 235);
     font-size: 18px;
     letter-spacing: 2px;
     font-weight: 100;
@@ -278,7 +317,7 @@ h2 {
     width: 300px;
     border-radius: 0px;
     background-color: transparent;
-    border-bottom:2.5px solid rgba(158, 16, 16, 0.637);
+    border-bottom:2.5px solid rgba(241, 234, 234, 0.637);
     transition: all 500ms cubic-bezier(0, 0.110, 0.35, 2);
   }
   /* end searchbar */

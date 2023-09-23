@@ -8,11 +8,12 @@ Here is where I grabbed my [backgorund](https://pixabay.com/videos/tunnel-futuri
 Here I will post up the resources i used to create the HeroDex.
 In this [video](https://www.youtube.com/watch?v=znqUwx0b0HI) I learned how to use a video as my backgorund.
 Grabbed glowing button from [here](https://codepen.io/Ks145/pen/MWGxbYr)
+Grabbed the searchbar [here](https://freefrontend.com/css-search-boxes/)
 ## Next steps
 1. 9/22 
 2. Add welcome instructions ***Complete***
-3. Add animation to welcome instructions so that they enlarge with the background
-4. Add search bar under instructions with a dropdown of all supers
+3. Add animation to welcome instructions so that they enlarge with the background ***Complete***
+4. Add search bar under instructions with a dropdown of all supers ***Complete***
 5. Add functionality, when super is searched or selected the instructions from step one should dissapear as well as the search bar.
 6. Add a back button that appears after step 5 and render all other info.
 
