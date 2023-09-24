@@ -10,10 +10,8 @@ In this [video](https://www.youtube.com/watch?v=znqUwx0b0HI) I learned how to us
 Grabbed glowing button from [here](https://codepen.io/Ks145/pen/MWGxbYr)
 Grabbed the searchbar [here](https://freefrontend.com/css-search-boxes/)
 ## Next steps
-1. 9/22 
-2. Add welcome instructions ***Complete***
-3. Add animation to welcome instructions so that they enlarge with the background ***Complete***
-4. Add search bar under instructions with a dropdown of all supers ***Complete***
-5. Add functionality, when super is searched or selected the instructions from step one should dissapear as well as the search bar.
-6. Add a back button that appears after step 5 and render all other info.
+1. 9/23 
+2. Add functionality, when super is searched or selected the instructions from step one should dissapear as well as the search bar.
+3. Add a back button that appears after step 5 and render all other info
+4. *** ERROR *** error trying to acces the API. Access to XMLHttpRequest at 'https://superheroapi.com/api/--/search/3' from origin 'http://localhost:5500' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource. 
 
