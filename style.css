@@ -322,3 +322,8 @@ h2 {
     transition: all 500ms cubic-bezier(0, 0.110, 0.35, 2);
   }
   /* end searchbar */
+
+  /* #photodiv {
+    display: flex;
+    size: 400px;
+  } */
