@@ -1,4 +1,5 @@
 // Global variables
+let bodyDiv = document.getElementById('body')
 let instructionsDiv = document.querySelector('#instructionsdiv')
 let searchAndButtonDiv = document.querySelector('#searchandbuttondiv')
 let glowingButton = document.querySelector('.glowing-btn')
@@ -6,14 +7,23 @@ let inputSearch = document.querySelector('#inputsearch')
 let photoDiv = document.getElementById('photodiv')
 let bioDiv = document.getElementById('biodiv')
 let apperanceDiv = document.getElementById('apperancediv')
+let weightDiv = document.getElementById('weightdiv')
 let powerStatsDiv = document.getElementById('powerstatsdiv')
 let workDiv = document.getElementById('workdiv')
+let buttonDiv = document.getElementById('buttondiv')
+let spaceTimeButton = document.getElementById('spacetimebutton')
 const apiKey = '9fe371286bmsh0ed916646153ee4p1f72d4jsnb6ca301a19c9'
 
 
 // function for verifying return data from the response variable.
 function isObject(value) {
     return value !== null && typeof value === 'object';
+}
+
+//function to check if a value to be populated to html is an empty value
+const isNull = (value) => {
+    if(value == "" || value == "-")
+    return " Unknown"
 }
 
 
@@ -51,13 +61,23 @@ glowingButton.addEventListener('click', async () => {
         let imageVariable = response.data.images.md
         photoDiv.innerHTML = `<img src=${imageVariable}>`
 
-        //sets varialbe for name, sets name to screen
+        //sets varialbe for name, sets name to screen. checks for empty values
         let bioVariable = response.data.biography.fullName
-        bioDiv.innerHTML = `Name:${bioVariable}`
+        let checkedBioVariable = isNull(bioVariable)
+        bioDiv.innerHTML = `Full Name:${checkedBioVariable}`
 
         //sets variable for height, post it to the div
         let apperanceVariable = response.data.appearance.height[0]
         apperanceDiv.innerHTML = `Height: ${apperanceVariable}`
+
+        //sets var for weight, post it
+        let weightVariable = response.data.appearance.weight[0]
+        weightDiv.innerHTML = `Weight: ${weightVariable}`
+
+        //sets var for occupation, post it to div. Checks for empty values.
+        let workVariable = response.data.work.occupation
+        let checkedWorkVariable = isNull(workVariable)
+        workDiv.innerHTML = `Occupations: ${checkedWorkVariable}`
 
 
         //Because there are multiple properties provided from the API here we have to loop through 
@@ -76,7 +96,12 @@ glowingButton.addEventListener('click', async () => {
             }
         }
 
+
+        buttonDiv.style.display = 'flex'
         
+        // const backButton = document.createElement('button')
+        // backButton.innerText = 'Back'
+        // bodyDiv.appendChild(backButton)
 
 
 

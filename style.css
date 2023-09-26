@@ -327,3 +327,21 @@ h2 {
     display: flex;
     size: 400px;
   } */
+
+  #allstatsdiv {
+    animation: flyIn 4s ease-in-out forwards; /* Animation properties */
+    background-color: rgba(0, 0, 0, 0.63);
+    color: rgb(255, 255, 255);
+    
+  }
+
+ #buttondiv {
+  display: none;
+  flex-grow: 1;
+  justify-content: center;
+  width: 100%;
+ }
+
+ #spacetimebutton {
+  width: 100%;
+ }
