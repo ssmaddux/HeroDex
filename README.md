@@ -17,4 +17,5 @@ pulling information from an API comes with its challenges. However making a plea
 5. when no call is made, the first object is returned.
 6. add on hover to the entire card to change background color
 7. add borders to dvide stats.
+8. wrap workdiv text 
 

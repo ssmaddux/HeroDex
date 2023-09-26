@@ -1,6 +1,6 @@
 body {
-    margin: 0;
-    padding: 0;
+    margin: 0px;
+    padding: 0px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -11,7 +11,8 @@ body {
 /* Center-container first child of the body  */
 .center-container {
     text-align: center; /* Center text inside the container */
-    max-width: 1000px; /* Max width of content in the div */
+    max-width: 800px; /* Max width of content in the div */
+    /* max-height: 1200px; */
 }
 
 /* background vided  */
@@ -344,10 +345,7 @@ h2::after{
   }
   /* end searchbar */
 
-  /* #photodiv {
-    display: flex;
-    size: 400px;
-  } */
+
 
   #allstatsdiv {
     animation: flyIn 4s ease-in-out forwards; /* Animation properties */
@@ -358,10 +356,13 @@ h2::after{
     width: 100%;
     font-size: 20px;
     cursor: crosshair;
+
     /* box-shadow: 20px 50px 10px 10px rgba(12, 12, 12, 0.658); */
-    
-    
   }
+  #allstatsdiv:hover{
+    background-color: black;
+  }
+
 
  #buttondiv {
   display: none;
@@ -393,12 +394,28 @@ h2::after{
   padding-bottom: 0%;
  }
 
- #photodiv {
-  
+ #workdiv{
+  max-width: 20em;
+  /* word-wrap: break-word; */
  }
 
 
- /* #photodiv{
-  flex-grow: 1;
-  width: 100%;
- } */
+ /* mobile */
+ @media (max-width: 600px) {
+  .center-container {
+      padding: 10px; /* Add some padding for better mobile display */
+  }
+  .video1 {
+      height: auto; /* Adjust video height for mobile screens */
+  }
+  #inputsearch {
+      width: 100%; /* Make the search bar full width on mobile screens */
+  }
+  #allstatsdiv {
+      font-size: 16px; /* Adjust font size for smaller screens */
+  }
+  #spacetimebutton {
+      font-size: 12px; /* Adjust button font size for smaller screens */
+  }
+  /* Add more mobile-specific styles as needed */
+}

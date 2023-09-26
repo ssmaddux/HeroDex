@@ -97,11 +97,7 @@ glowingButton.addEventListener('click', async () => {
         let checkedWorkVariable = isNull(workVariable)
         workDiv.innerHTML = `Occupations: ${checkedWorkVariable}`
 
-
-
-        
-        
-
+        //Deleting old stats before adding.
         while (powerStatsDiv.firstChild) {
             powerStatsDiv.removeChild(powerStatsDiv.firstChild);
         }
@@ -124,39 +120,19 @@ glowingButton.addEventListener('click', async () => {
             }
         }
 
-        
-
-
+    
+        //Displaying the back button
         buttonDiv.style.display = 'flex'
-        
-        // const backButton = document.createElement('button')
-        // backButton.innerText = 'Back'
-        // bodyDiv.appendChild(backButton)
-
-
-
-
 
     } else {
          alert(`Character ${inputSearch.value} not found`)
     }
- 
-
-    // //API call with the text from the search bar injected.
-    // let response = await axios.get(`https://superhero-search.p.rapidapi.com/api/${apiKey}/search/${searchBarReturnValue}`)
-    // console.log(response.data.response)
-
-
-
-
 
 })
 
 spaceTimeButton.addEventListener('click', () => {
     allStatsDiv.style.display = 'none'
     instructionsDiv.style.display = 'flex'
-    searchAndButtonDiv.style.display = 'flex'
-    
-    
+    searchAndButtonDiv.style.display = 'flex'  
 
 })
