@@ -11,7 +11,7 @@ body {
 /* Center-container first child of the body  */
 .center-container {
     text-align: center; /* Center text inside the container */
-    max-width: 800px; /* Max width of content in the div */
+    max-width: 1000px; /* Max width of content in the div */
 }
 
 /* background vided  */
@@ -330,8 +330,15 @@ h2 {
 
   #allstatsdiv {
     animation: flyIn 4s ease-in-out forwards; /* Animation properties */
-    background-color: rgba(0, 0, 0, 0.63);
+    background-image: linear-gradient(to right, rgba(69, 31, 131, 0.212), rgba(7, 7, 14, 0.829));
+    /* background-color: rgba(0, 0, 0, 0.63); */
     color: rgb(255, 255, 255);
+    flex-grow: 1;
+    width: 100%;
+    font-size: 20px;
+    cursor: crosshair;
+    /* box-shadow: 20px 50px 10px 10px rgba(12, 12, 12, 0.658); */
+    
     
   }
 
@@ -339,9 +346,34 @@ h2 {
   display: none;
   flex-grow: 1;
   justify-content: center;
-  width: 100%;
+  
  }
 
  #spacetimebutton {
   width: 100%;
+  animation: border-flicker 2s linear infinite;
+  animation: text-flicker 3s linear infinite;
+  color: #33333300;
+  background-image: linear-gradient(to right, rgba(69, 31, 131, 0.212), rgba(7, 7, 14, 0.829));
+  font-size: 15px;
+  
+  
  }
+
+ #spacetimebutton:hover{
+  animation: none;
+  cursor: not-allowed;
+  color: #ee0707;
+  font-size: 15px;
+  
+ }
+
+ #h2{
+  padding-bottom: 0%;
+ }
+
+
+ /* #photodiv{
+  flex-grow: 1;
+  width: 100%;
+ } */

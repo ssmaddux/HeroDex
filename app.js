@@ -4,6 +4,7 @@ let instructionsDiv = document.querySelector('#instructionsdiv')
 let searchAndButtonDiv = document.querySelector('#searchandbuttondiv')
 let glowingButton = document.querySelector('.glowing-btn')
 let inputSearch = document.querySelector('#inputsearch')
+let nameHtwo = document.getElementById('nameh2')
 let photoDiv = document.getElementById('photodiv')
 let bioDiv = document.getElementById('biodiv')
 let apperanceDiv = document.getElementById('apperancediv')
@@ -62,6 +63,9 @@ glowingButton.addEventListener('click', async () => {
          instructionsDiv.style.display = 'none'
         searchAndButtonDiv.style.display = 'none'
 
+        let nameVariable = response.data.name
+        nameHtwo.innerHTML = nameVariable
+        
         //sets variable for image, sets picture to display
         let imageVariable = response.data.images.md
         photoDiv.innerHTML = `<img src=${imageVariable}>`
@@ -95,6 +99,8 @@ glowingButton.addEventListener('click', async () => {
 
                 //creating new element for each key-value pair.
                 const statElement = document.createElement('div');
+                statElement.setAttribute("class", "innerpowerstatsdiv")
+                // statElement.setAttribute("width", "100%")
                 statElement.innerHTML = `${key}: ${value}`;
                 
                 //appending the new element to the powerstatsdiv
