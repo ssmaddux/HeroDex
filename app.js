@@ -22,8 +22,13 @@ function isObject(value) {
 
 //function to check if a value to be populated to html is an empty value
 const isNull = (value) => {
-    if(value == "" || value == "-")
-    return " Unknown"
+    if(value === "" || value === "-") {
+        return " Unknown"
+    } else {
+        return value
+    }
+    
+
 }
 
 
@@ -64,7 +69,8 @@ glowingButton.addEventListener('click', async () => {
         //sets varialbe for name, sets name to screen. checks for empty values
         let bioVariable = response.data.biography.fullName
         let checkedBioVariable = isNull(bioVariable)
-        bioDiv.innerHTML = `Full Name:${checkedBioVariable}`
+        console.log(checkedBioVariable)
+        bioDiv.innerHTML = `Full Name: ${checkedBioVariable}`
 
         //sets variable for height, post it to the div
         let apperanceVariable = response.data.appearance.height[0]

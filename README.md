@@ -14,4 +14,5 @@ Grabbed the searchbar [here](https://freefrontend.com/css-search-boxes/)
 2. Add name to the top of the calling card
 3. add functionality to back button and style so the button takes 100% of parent div
 4. Soften edges of png
+5. when no call is made, the first object is returned.
 
