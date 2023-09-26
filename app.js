@@ -6,6 +6,7 @@ let glowingButton = document.querySelector('.glowing-btn')
 let inputSearch = document.querySelector('#inputsearch')
 let nameHtwo = document.getElementById('nameh2')
 let photoDiv = document.getElementById('photodiv')
+let allStatsDiv = document.getElementById('allstatsdiv')
 let bioDiv = document.getElementById('biodiv')
 let apperanceDiv = document.getElementById('apperancediv')
 let weightDiv = document.getElementById('weightdiv')
@@ -14,6 +15,7 @@ let workDiv = document.getElementById('workdiv')
 let buttonDiv = document.getElementById('buttondiv')
 let spaceTimeButton = document.getElementById('spacetimebutton')
 const apiKey = '9fe371286bmsh0ed916646153ee4p1f72d4jsnb6ca301a19c9'
+
 
 
 // function for verifying return data from the response variable.
@@ -59,16 +61,22 @@ glowingButton.addEventListener('click', async () => {
 
     
     if(isObject(response.data)) {
-        //sets display to none upon successful dearch for super.
-         instructionsDiv.style.display = 'none'
+        //sets display to none upon successful search for super.
+        // instructionsDiv.style.animation = 'flyOut 4s ease-in-out forwards'
+        // searchAndButtonDiv.style.animation = 'flyOut 4s ease-in-out forwards'
+        // allStatsDiv.style.animation = 'flyIn 4s ease-in-out forwards'
+        instructionsDiv.style.display = 'none'
         searchAndButtonDiv.style.display = 'none'
+        allStatsDiv.style.display = 'block'
+
 
         let nameVariable = response.data.name
         nameHtwo.innerHTML = nameVariable
-        
+
         //sets variable for image, sets picture to display
         let imageVariable = response.data.images.md
         photoDiv.innerHTML = `<img src=${imageVariable}>`
+    
 
         //sets varialbe for name, sets name to screen. checks for empty values
         let bioVariable = response.data.biography.fullName
@@ -90,6 +98,14 @@ glowingButton.addEventListener('click', async () => {
         workDiv.innerHTML = `Occupations: ${checkedWorkVariable}`
 
 
+
+        
+        
+
+        while (powerStatsDiv.firstChild) {
+            powerStatsDiv.removeChild(powerStatsDiv.firstChild);
+        }
+        
         //Because there are multiple properties provided from the API here we have to loop through 
         //looping through the objects properties
         let powerStatsVariable = response.data.powerstats
@@ -108,6 +124,8 @@ glowingButton.addEventListener('click', async () => {
             }
         }
 
+        
+
 
         buttonDiv.style.display = 'flex'
         
@@ -122,22 +140,7 @@ glowingButton.addEventListener('click', async () => {
     } else {
          alert(`Character ${inputSearch.value} not found`)
     }
-
-
-    
-
-        
-
-
-      
-
-      
-
-
-
-
-
-    
+ 
 
     // //API call with the text from the search bar injected.
     // let response = await axios.get(`https://superhero-search.p.rapidapi.com/api/${apiKey}/search/${searchBarReturnValue}`)
@@ -146,5 +149,14 @@ glowingButton.addEventListener('click', async () => {
 
 
 
+
+})
+
+spaceTimeButton.addEventListener('click', () => {
+    allStatsDiv.style.display = 'none'
+    instructionsDiv.style.display = 'flex'
+    searchAndButtonDiv.style.display = 'flex'
+    
+    
 
 })

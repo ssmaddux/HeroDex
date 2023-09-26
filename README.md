@@ -10,10 +10,11 @@ pulling information from an API comes with its challenges. However making a plea
 4. Grabbed glowing button from [here](https://codepen.io/Ks145/pen/MWGxbYr)
 5. Grabbed the searchbar [here](https://freefrontend.com/css-search-boxes/)
 ## Next steps
-1. 9/2 
-2. Add name to the top of the calling card ***Done***
-3. add functionality to back button and style ***Done***
+1. 9/26 
+2. add fly out/in to the allstatsdiv
+3. add fuctionality to back button ***DONE***
 4. Soften edges of png
 5. when no call is made, the first object is returned.
-6. style fonts for calling card data, larger, padding.***Done***
+6. add on hover to the entire card to change background color
+7. add borders to dvide stats.
 

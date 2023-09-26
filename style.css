@@ -47,6 +47,9 @@ body {
     transition: 3s;
     perspective: 1000px; /* Perspective for 3D effect */
 }
+#instructionsdiv::after {
+  display: none;
+}
 
 
 h2 {
@@ -55,6 +58,9 @@ h2 {
     justify-content: center;
     transform: translateZ(-500px) scale(0.2); /* Initial position and size */
     animation: flyIn 4s ease-in-out forwards; /* Animation properties */
+}
+h2::after{
+  display: none;
 }
 
 @keyframes flyIn {
@@ -68,6 +74,17 @@ h2 {
     }
 }
 
+@keyframes flyOut {
+  0% {
+      transform: translateZ(0) scale(1); /* Initial position and size */
+      opacity: 1; /* Start with opacity 0 */
+  }
+  100% {
+      transform: translateZ(-500px) scale(0.2); /* Final position and size */
+      opacity: 0; /* End with opacity 1 */
+  }
+}
+
 #searchandbuttondiv {
     display: flex;
     justify-content: center;
@@ -76,6 +93,10 @@ h2 {
     animation: flyIn 4s ease-in-out forwards; /* Animation properties */
     
 
+}
+
+#searchandbuttondiv::after {
+  display: none;
 }
 
 
@@ -370,6 +391,10 @@ h2 {
 
  #h2{
   padding-bottom: 0%;
+ }
+
+ #photodiv {
+  
  }
 
 
