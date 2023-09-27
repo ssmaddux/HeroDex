@@ -36,11 +36,20 @@ const isNull = (value) => {
 
 
 
+
+
 console.log("working")
 
 
 //Event listener for click on glowing button.
 glowingButton.addEventListener('click', async () => {
+    
+    
+    const inputValue = inputSearch.value.trim(); // Trim whitespace from the input
+    if (!inputValue) {
+        alert("Please input a super name");
+        return; // Exit the function if the input is empty
+    }
 
     
     const options = {
@@ -57,14 +66,13 @@ glowingButton.addEventListener('click', async () => {
     console.log(response.data);
     // console.log(response.data.name)
     // console.log(response.data.appearance.eyeColor)
+      
+    
 
 
     
     if(isObject(response.data)) {
         //sets display to none upon successful search for super.
-        // instructionsDiv.style.animation = 'flyOut 4s ease-in-out forwards'
-        // searchAndButtonDiv.style.animation = 'flyOut 4s ease-in-out forwards'
-        // allStatsDiv.style.animation = 'flyIn 4s ease-in-out forwards'
         instructionsDiv.style.display = 'none'
         searchAndButtonDiv.style.display = 'none'
         allStatsDiv.style.display = 'block'

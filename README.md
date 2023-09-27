@@ -4,18 +4,14 @@ This project will be an information providing web application. I would like to p
 ### likely challenges
 pulling information from an API comes with its challenges. However making a pleasing to the eye webpage is my weakness in this moment. As well as adding animation and moving elements will be challenging for me.
 ## Resources
-1. Here is where I grabbed my [backgorund](https://pixabay.com/videos/tunnel-futuristic-scifi-sci-fi-27438/)
-2. Here I will post up the resources i used to create the HeroDex.
+1. Here I will post up the resources i used to create the HeroDex.
+2. Here is where I grabbed my [backgorund](https://pixabay.com/videos/tunnel-futuristic-scifi-sci-fi-27438/)
 3. In this [video](https://www.youtube.com/watch?v=znqUwx0b0HI) I learned how to use a video as my backgorund.
 4. Grabbed glowing button from [here](https://codepen.io/Ks145/pen/MWGxbYr)
 5. Grabbed the searchbar [here](https://freefrontend.com/css-search-boxes/)
 ## Next steps
-1. 9/26 
-2. add fly out/in to the allstatsdiv
-3. add fuctionality to back button ***DONE***
-4. Soften edges of png
-5. when no call is made, the first object is returned.
-6. add on hover to the entire card to change background color
-7. add borders to dvide stats.
-8. wrap workdiv text 
+1. 9/27 
+2.  when no call is made, the first object is returned.
+
+
 
