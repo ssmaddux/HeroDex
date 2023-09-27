@@ -43,7 +43,7 @@ console.log("working")
 
 //Event listener for click on glowing button.
 glowingButton.addEventListener('click', async () => {
-    
+
     
     const inputValue = inputSearch.value.trim(); // Trim whitespace from the input
     if (!inputValue) {
@@ -51,7 +51,7 @@ glowingButton.addEventListener('click', async () => {
         return; // Exit the function if the input is empty
     }
 
-    
+    // API call
     const options = {
         method: 'GET',
         url: 'https://superhero-search.p.rapidapi.com/api/',
@@ -61,11 +61,11 @@ glowingButton.addEventListener('click', async () => {
           'X-RapidAPI-Host': 'superhero-search.p.rapidapi.com'
         }
       }
-      
+    
+    // defining the response to use   
     let response = await axios.request(options);
     console.log(response.data);
-    // console.log(response.data.name)
-    // console.log(response.data.appearance.eyeColor)
+
       
     
 
@@ -77,7 +77,7 @@ glowingButton.addEventListener('click', async () => {
         searchAndButtonDiv.style.display = 'none'
         allStatsDiv.style.display = 'block'
 
-
+        //populating name at top of photo
         let nameVariable = response.data.name
         nameHtwo.innerHTML = nameVariable
 
@@ -138,6 +138,8 @@ glowingButton.addEventListener('click', async () => {
 
 })
 
+
+//Adding functionality to back button, displays instructions and searchbar for continued searching.
 spaceTimeButton.addEventListener('click', () => {
     allStatsDiv.style.display = 'none'
     instructionsDiv.style.display = 'flex'
