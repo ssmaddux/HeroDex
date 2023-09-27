@@ -1,6 +1,6 @@
 # HeroDex
 ## A project for all nerdkind
-The HeroDex is an intercative web app that provides information about different superheros and villans. I pull my super information from an API called [SuperHeroSearch] (https://rapidapi.com/jakash1997/api/superhero-search) without it this project wouldnt be possible. I hope to make an interactive webpage that is immersive for our younger viewers that is pleasing to the eye and enjoyable to use. You start the journey to knwoledge in a super layer inbetween universes it contains many paths....choose wisely. 
+The HeroDex is an intercative web app that provides information about different superheros and villans. I pull my super information from an API called [SuperHeroSearch](https://rapidapi.com/jakash1997/api/superhero-search) without it this project wouldnt be possible. I hope to make an interactive webpage that is immersive for our younger viewers that is pleasing to the eye and enjoyable to use. You start the journey to knwoledge in a super layer inbetween universes it contains many paths....choose wisely. 
 ## How To
 To use the HeroDex simply click the grey square to the left of the ***EXTRACT*** button it will then reveal itself. Type in a supers name who you would like to know more about. The information provided will be full name if available, height, weight, power stats, and jobs they work if they have an alter ego. Once super info is displayed, to go back click the reverse space time button to travel back into the multiverse layer of knowledge to search another super.
 
