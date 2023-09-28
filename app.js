@@ -36,19 +36,8 @@ const isNull = (value) => {
 
 }
 
-// playPausebttn.addEventListener('click', async () => {
-//     if(mpThree.play()) {
-//         mpThree.pause()
-//         playPausebttn.innerText = 'Play'
-//     } else if (mpThree.pause()) {
-//         mpThree.play()
-//         playPausebttn.innerText = 'Pause'
-//     }
 
-    
-// })
-
-
+//stop start for audio
 function togglePlayPause() {
     if (mpThree.paused) {
         mpThree.play();
@@ -61,6 +50,12 @@ function togglePlayPause() {
 
 // Add a click event listener to the play/pause button
 playPausebttn.addEventListener('click', togglePlayPause);
+
+
+// document.addEventListener('DOMContentLoaded', function () {
+//     mpThree = document.getElementById('mp3');
+//     mpThree.play();
+// });
 
 console.log("working")
 
