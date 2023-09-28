@@ -406,3 +406,11 @@ h2::after{
       font-size: 12px; 
   }
 }
+
+.music {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 10px; /* Adjust padding as needed */
+  z-index: 9999; /* Ensure it's above other content */
+}

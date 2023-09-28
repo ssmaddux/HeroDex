@@ -1,4 +1,6 @@
 // Global variables
+let playPausebttn = document.getElementById('musicbutton')
+let mpThree = document.getElementById('mp3')
 let bodyDiv = document.getElementById('body')
 let instructionsDiv = document.querySelector('#instructionsdiv')
 let searchAndButtonDiv = document.querySelector('#searchandbuttondiv')
@@ -34,9 +36,31 @@ const isNull = (value) => {
 
 }
 
+// playPausebttn.addEventListener('click', async () => {
+//     if(mpThree.play()) {
+//         mpThree.pause()
+//         playPausebttn.innerText = 'Play'
+//     } else if (mpThree.pause()) {
+//         mpThree.play()
+//         playPausebttn.innerText = 'Pause'
+//     }
+
+    
+// })
 
 
+function togglePlayPause() {
+    if (mpThree.paused) {
+        mpThree.play();
+        playPausebttn.innerHTML = 'pause';
+    } else {
+        mpThree.pause();
+        playPausebttn.innerHTML = 'play';
+    }
+}
 
+// Add a click event listener to the play/pause button
+playPausebttn.addEventListener('click', togglePlayPause);
 
 console.log("working")
 
