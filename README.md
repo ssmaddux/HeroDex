@@ -1,4 +1,5 @@
 # HeroDex
+![Super Man](supermanherodex.PNG)
 ## A project for all nerdkind
 The HeroDex is an intercative web app that provides information about different superheros and villans. I pull my super information from an API called [SuperHeroSearch](https://rapidapi.com/jakash1997/api/superhero-search) without it this project wouldnt be possible. I hope to make an interactive webpage that is immersive for our younger viewers that is pleasing to the eye and enjoyable to use. You start the journey to knwoledge in a super layer inbetween universes it contains many paths....choose wisely. 
 ## How To
@@ -24,7 +25,7 @@ To use the HeroDex simply click the grey square to the left of the ***EXTRACT***
 4. Grabbed glowing button from [here](https://codepen.io/Ks145/pen/MWGxbYr)
 5. Grabbed the searchbar [here](https://freefrontend.com/css-search-boxes/)
 ## Next steps
-1. 9/27 
+1. 9/28 
 2. Deploy
 3. Project Completed
 
