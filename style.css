@@ -364,7 +364,7 @@ h2::after{
   width: 100%;
   animation: border-flicker 2s linear infinite;
   animation: text-flicker 3s linear infinite;
-  color: #33333300;
+  color: #333333b9;
   background-image: linear-gradient(to right, rgba(69, 31, 131, 0.212), rgba(7, 7, 14, 0.829));
   font-size: 15px;
   
